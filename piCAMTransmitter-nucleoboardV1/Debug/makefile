@@ -60,8 +60,8 @@ all: main-build
 main-build: piCAMTransmitter.elf secondary-outputs
 
 # Tool invocations
-piCAMTransmitter.elf piCAMTransmitter.map: $(OBJS) $(USER_OBJS) C:\Users\abrah\Documents\UMSATS\CDH\Camera\ Configuration\piCAMTransmitter\STM32L452RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "piCAMTransmitter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\abrah\Documents\UMSATS\CDH\Camera Configuration\piCAMTransmitter\STM32L452RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="piCAMTransmitter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+piCAMTransmitter.elf piCAMTransmitter.map: $(OBJS) $(USER_OBJS) C:\Users\syeda\Documents\U\ UMSATS\CDH\piCAMTransmitter-tsat6\piCAMTransmitter-nucleoboardV1\STM32L452RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "piCAMTransmitter.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\syeda\Documents\U UMSATS\CDH\piCAMTransmitter-tsat6\piCAMTransmitter-nucleoboardV1\STM32L452RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="piCAMTransmitter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
